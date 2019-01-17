@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+   <title>MakeGrid</title>
+</head>
+<body>
+<h1>MakeGrid</h1>
+
+<p>The MakeGrid application makes az/alt grids to use with TUI for collecting pointing data. <a href="http://www.apo.nmsu.edu/35m_operations/makeGrid/files">Download</a> a MacOS application, or run from source in tcc/utils/makeGrid/runMakeGrid.py.
+
+<h2>Instructions</h2>
+
+<ul>
+    <li>Set the desired number of points and altitude range. You can usually leave the other settings alone.
+    <li>Press Generate and wait while the grid is generated
+    <li>Examine the grid to see if it is OK. If it has two points that are very near each other, then it is not OK. Press Generate to try again.
+    <li>Once you like the grid, press Save to save it. TUI's Telescope:Pointing Data script looks for grid files in TUIAdditions/Grids, and you do not need to restart TUI to see new grid files (the script looks for grid files every time you click on the Grid menu).
+    <li>You can also load existing grid files using Load, in case you want to examine the graph.
+</ul>
+
+<h2>Version History</h2>
+
+<h3>0.9 2014-05-07</h3>
+
+<p>Fixes for issues Russet raised:
+<ul>
+    <li>The graph now has E left, like TUI's Sky window
+    <li>The graph now has altitude lines every 15 degrees, like TUI's Sky window, instead of every 10.
+</ul>
+
+<h3>0.8.5 2014-05-06</h3>
+
+<p>Change to a technique the concentrates points at the altitude boundaries, in order to cross lowest and highest magnesensors more often. Adde flag CoverHemisphere to generateGrid.py to control this.
+
+<h3>0.8.0 2014-05-06</h3>
+
+<p>First public release.
+
+</body>
+</html>
